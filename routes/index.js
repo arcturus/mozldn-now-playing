@@ -3,7 +3,7 @@ var router = express.Router();
 var sonos = require('../sonos');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get(/\/(index\.html)?/, function(req, res, next) {
   console.log('----> about to discover');
   sonos.discover().then((track) => {
     console.log('----> rendering index');

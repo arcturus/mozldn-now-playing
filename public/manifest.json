@@ -1,0 +1,16 @@
+{
+  "name": "Currently playing at MozLondon Sonos",
+  "short_name": "MozLDN playing",
+  "icons": [
+    {
+      "src": "/images/icons/icon-small.png",
+      "sizes": "64x64"
+    },
+    {
+      "src": "/images/icons/icon-large.png",
+      "sizes": "128x128"
+    }
+  ],
+  "scope": "/",
+  "start_url": "/"
+}
