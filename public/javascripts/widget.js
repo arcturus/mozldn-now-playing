@@ -14,9 +14,7 @@ function hideControls() {
 }
 
 function reload() {
-  setTimeout(function() {
-    document.location.reload();
-  }, 500);
+  document.location.reload();
 }
 
 function nextSong() {

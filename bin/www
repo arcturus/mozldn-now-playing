@@ -17,7 +17,7 @@ var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
 var ad = mdns.createAdvertisement(mdns.tcp('http'), port, {
-  name: 'MozLDN: now playing ...'
+  name: 'MozLDN_Sonos'
 });
 
 ad.start();
