@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('now-playing:server');
 var http = require('http');
+var mdns = require('mdns');
 
 /**
  * Get port from environment and store in Express.
@@ -14,6 +15,12 @@ var http = require('http');
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+
+var ad = mdns.createAdvertisement(mdns.tcp('http'), port, {
+  name: 'MozLDN: now playing ...'
+});
+
+ad.start();
 
 /**
  * Create HTTP server.
