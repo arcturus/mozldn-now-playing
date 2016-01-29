@@ -5,7 +5,7 @@ var Oembed = function(req, res, next) {
   sonos.discover().then((track) => {
     var oembed = {
       version: '1.0',
-      type: 'web',
+      type: 'rich',
       provider_name: 'MozLDN Now Playing',
       provider_url: utils.getOrigin(req),
       title: track.title,
