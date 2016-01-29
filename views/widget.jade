@@ -2,5 +2,9 @@ extends layout
 
 block content
   script(src="/javascripts/widget.js")
-  img(id="prev", src="images/prev.png")
-  img(id="next", src="images/next.png")
+  div(id="widgetBackground", style="background-image: url(" + albumArtURL + ")")
+  div(id="widgetArt")
+    img(src=albumArtURL)
+    div(id="controls")
+      img(id="prev", src="images/prev.png")
+      img(id="next", src="images/next.png")
