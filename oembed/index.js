@@ -13,7 +13,7 @@ var Oembed = function(req, res, next) {
       thumbnail_url: track.albumArtURL,
       height: 640,
       width: 640,
-      html: '<iframe src="' + utils.getOrigin(req) + '" width="640" height="640"></iframe>'
+      html: '<iframe src="/widget.html" width="640" height="640"></iframe>'
     }
     res.send(oembed);
   }).catch((err) => {

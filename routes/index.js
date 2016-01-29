@@ -7,7 +7,7 @@ var utils = require('../utils');
 function discover(req, res, view) {
   return sonos.discover().then((data) => {
     if (view === 'index') {
-      data.oembed = utils.getOrigin(req) + 'oembed.json';
+      data.oembed = '/oembed.json';
     }
     res.render(view, data);
   }, (err) => {
