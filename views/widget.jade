@@ -7,4 +7,8 @@ block content
     img(src=albumArtURL)
     div(id="controls")
       img(id="prev", src="images/prev.png")
+      -if (status !='playing')
+        img(id="play", src="images/play.png")
+      -else
+        img(id="pause", src="images/pause.png")
       img(id="next", src="images/next.png")

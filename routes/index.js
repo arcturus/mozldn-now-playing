@@ -11,7 +11,7 @@ function discover(req, res, view) {
     }
     res.render(view, data);
   }, (err) => {
-    res.render('error', err);
+    res.render('error', {error: err});
   })
 }
 
@@ -34,7 +34,19 @@ router.get('/controls/next', function(req, res, next) {
 });
 
 router.get('/controls/prev', function(req, res, next) {
-  sonos.next().then(() => {
+  sonos.prev().then(() => {
+    res.send({});
+  })
+});
+
+router.get('/controls/play', function(req, res, next) {
+  sonos.play().then(() => {
+    res.send({});
+  })
+});
+
+router.get('/controls/pause', function(req, res, next) {
+  sonos.pause().then(() => {
     res.send({});
   })
 });
