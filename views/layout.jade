@@ -6,5 +6,7 @@ html
     link(rel='manifest' href='/manifest.json')
     meta(property='og:title' content=title)
     meta(property='og:image' content=albumArtURL)
+    - if (locals.oembed)
+      link(re='alternate', type='application/json+oembed', href=oembed)
   body
     block content
